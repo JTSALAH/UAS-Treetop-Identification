@@ -52,11 +52,11 @@ library(tidyverse)
   mcws[["crownRadius"]] <- mcws[["crownDiameter"]]/2
 
   # Computer Canopy Volume (Cone & Hemicircle)
-  mcwsvi$Volume_Cone <- 1/3 * pi * mcwsvi$crownRadius^2 * mcwsvi$height
-  mcwsvi$Volume_Hemi <- 2/3 * pi * mcwsvi$crownRadius^3
+  mcws$Volume_Cone <- 1/3 * pi * mcws$crownRadius^2 * mcws$height
+  mcws$Volume_Hemi <- 2/3 * pi * mcws$crownRadius^3
   
-  mean(mcwsvi$Volume_Cone) # meters cubed
-  mean(mcwsvi$Volume_Hemi) # meters cubed
+  mean(mcws$Volume_Cone) # meters cubed
+  mean(mcws$Volume_Hemi) # meters cubed
   
 # ---- 5: Render CHM w/ RayShader Package ----
   
