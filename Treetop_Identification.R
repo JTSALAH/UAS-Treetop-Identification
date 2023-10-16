@@ -11,8 +11,8 @@
 # ---- 1: Create Canopy Height Model ----
 
   # Note: Ensure projection is in meters.
-  dsm = raster(here::here("data", "DSM.tif"))
-  dtm = raster(here::here("data", "DTM.tif"))
+  dsm = raster(file.choose())
+  dtm = raster(file.choose())
   chm = dsm - dtm
   
 # ---- 2: Detect Tree Tops ----
